@@ -54,7 +54,7 @@ if 'session_id' not in st.session_state:
     # UUID - Universal Unique IDentifier
     st.session_state['session_id'] = uuid.uuid4().hex
     st.session_state['is_new_file'] = False
-    with open('src/data/em.pkl', 'rb') as file_obj:
+    with open('em.pkl', 'rb') as file_obj:
         em_model = pickle.load(file_obj)
         st.session_state['em_model'] = em_model
 
